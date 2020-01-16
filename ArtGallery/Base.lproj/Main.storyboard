@@ -27,20 +27,33 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUS-hJ-Rqe">
+                                        <rect key="frame" x="20" y="428" width="365" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="s8N-MI-b36"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="EXPLORE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="BoI-dM-yEy" firstAttribute="leading" secondItem="aEX-wL-5wl" secondAttribute="leading" id="9So-3V-dRd"/>
                                     <constraint firstAttribute="trailing" secondItem="CBH-Pf-hcH" secondAttribute="trailing" constant="20" id="COw-3L-ka8"/>
                                     <constraint firstItem="BoI-dM-yEy" firstAttribute="top" secondItem="aEX-wL-5wl" secondAttribute="top" id="CR7-ec-xRf"/>
+                                    <constraint firstAttribute="trailing" secondItem="zUS-hJ-Rqe" secondAttribute="trailing" constant="29" id="DOt-Yn-1CA"/>
                                     <constraint firstItem="CBH-Pf-hcH" firstAttribute="centerY" secondItem="aEX-wL-5wl" secondAttribute="centerY" id="Ef3-dm-nP0"/>
                                     <constraint firstItem="CBH-Pf-hcH" firstAttribute="leading" secondItem="aEX-wL-5wl" secondAttribute="leading" constant="20" id="PKj-Cm-qXV"/>
+                                    <constraint firstItem="zUS-hJ-Rqe" firstAttribute="centerY" secondItem="aEX-wL-5wl" secondAttribute="centerY" id="Qp9-V4-3OH"/>
                                     <constraint firstAttribute="trailing" secondItem="BoI-dM-yEy" secondAttribute="trailing" id="hOz-SF-upf"/>
                                     <constraint firstAttribute="bottom" secondItem="BoI-dM-yEy" secondAttribute="bottom" id="pcu-pv-hFs"/>
+                                    <constraint firstItem="zUS-hJ-Rqe" firstAttribute="leading" secondItem="aEX-wL-5wl" secondAttribute="leading" constant="20" id="uLL-6m-z0Z"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aEX-wL-5wl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dxl-NE-D0z"/>
                             <constraint firstAttribute="bottom" secondItem="aEX-wL-5wl" secondAttribute="bottom" id="JO1-iT-ud7"/>
@@ -52,6 +65,7 @@
                     <navigationItem key="navigationItem" id="dfw-ji-Dxf"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="BoI-dM-yEy" id="wqK-Te-ZSa"/>
+                        <outlet property="exploreButton" destination="zUS-hJ-Rqe" id="HXK-Ue-8xu"/>
                         <outlet property="introView" destination="aEX-wL-5wl" id="tRh-bw-10s"/>
                         <outlet property="labelCenterConstraint" destination="Ef3-dm-nP0" id="oYS-Nv-XGM"/>
                         <outlet property="titleLabel" destination="CBH-Pf-hcH" id="UlZ-EG-w4I"/>
@@ -73,9 +87,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="detailsImage" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-iS-giD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AIv-rD-7Ma"/>
                     </view>
                     <navigationItem key="navigationItem" id="SNB-tN-AIQ"/>

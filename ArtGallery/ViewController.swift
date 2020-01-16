@@ -94,11 +94,10 @@ class ViewController: UIViewController {
 
     }
     
-    func detailsAction() {
+    @IBAction func exploreAction(_ sender: UIButton) {
         let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "ImageGalleryViewController") as! ImageGalleryViewController
         navigationController?.pushViewController(detailsViewController, animated: true)
     }
-
 
 }
 

@@ -55,17 +55,17 @@
                         <outlet property="introView" destination="aEX-wL-5wl" id="tRh-bw-10s"/>
                         <outlet property="labelCenterConstraint" destination="Ef3-dm-nP0" id="oYS-Nv-XGM"/>
                         <outlet property="titleLabel" destination="CBH-Pf-hcH" id="UlZ-EG-w4I"/>
-                        <segue destination="3iw-P9-8hP" kind="show" identifier="ShowImageGalleryViewController" id="YE1-nt-ong"/>
+                        <segue destination="3iw-P9-8hP" kind="show" identifier="ShowLoginViewController" id="YE1-nt-ong"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1565.217391304348" y="57.589285714285708"/>
         </scene>
-        <!--Image Gallery View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="R4X-3b-Lnb">
             <objects>
-                <viewController storyboardIdentifier="ImageGalleryViewController" id="3iw-P9-8hP" customClass="ImageGalleryViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3iw-P9-8hP" customClass="LoginViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5B-DA-uTI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,18 +74,79 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dji-7X-sGx">
+                                <rect key="frame" x="20" y="188" width="374" height="303"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ART Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTf-pg-d48" userLabel="ART Gallery Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RtL-J4-xAw">
+                                        <rect key="frame" x="0.0" y="90" width="374" height="73"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNi-U1-dbb">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-of-gBC">
+                                                <rect key="frame" x="0.0" y="39" width="374" height="34"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-YL-zkv">
+                                        <rect key="frame" x="0.0" y="193" width="374" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fQJ-X4-QtC"/>
+                                        </constraints>
+                                        <state key="normal" title="LOGIN"/>
+                                        <connections>
+                                            <action selector="loginAction:" destination="3iw-P9-8hP" eventType="touchUpInside" id="sTm-EH-hmH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8A-OQ-bHz">
+                                        <rect key="frame" x="0.0" y="263" width="374" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rN5-fN-MR6"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dji-7X-sGx" firstAttribute="top" secondItem="AIv-rD-7Ma" secondAttribute="top" constant="100" id="Srh-42-qDp"/>
+                            <constraint firstItem="dji-7X-sGx" firstAttribute="leading" secondItem="b5B-DA-uTI" secondAttribute="leading" constant="20" id="Znd-bZ-VvL"/>
+                            <constraint firstAttribute="trailing" secondItem="dji-7X-sGx" secondAttribute="trailing" constant="20" id="h6Q-9v-kce"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AIv-rD-7Ma"/>
                     </view>
                     <navigationItem key="navigationItem" id="SNB-tN-AIQ"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="aAb-iS-giD" id="gEg-Vt-UKP"/>
+                        <outlet property="loginButton" destination="oV8-YL-zkv" id="SF9-yU-ZHw"/>
+                        <outlet property="mainStackView" destination="dji-7X-sGx" id="CJA-2q-UXA"/>
+                        <outlet property="passwordTextField" destination="QMg-of-gBC" id="NPa-6b-OrY"/>
+                        <outlet property="titleLabel" destination="kTf-pg-d48" id="4cw-pS-05Z"/>
+                        <outlet property="usernameTextField" destination="RNi-U1-dbb" id="RjH-eb-Tgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICN-LL-h44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2520" y="-247"/>
+            <point key="canvasLocation" x="2518.840579710145" y="-247.09821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3lu-5Y-QyM">

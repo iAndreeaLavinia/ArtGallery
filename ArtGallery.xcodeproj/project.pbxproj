@@ -15,7 +15,7 @@
 		93353C7623CFBCD800BE57DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93353C7423CFBCD800BE57DE /* LaunchScreen.storyboard */; };
 		93353C8123CFBCD800BE57DE /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93353C8023CFBCD800BE57DE /* ArtGalleryTests.swift */; };
 		93353C8C23CFBCD800BE57DE /* ArtGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93353C8B23CFBCD800BE57DE /* ArtGalleryUITests.swift */; };
-		93BED92B23CFDE1300DF6CA9 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BED92A23CFDE1300DF6CA9 /* ImageGalleryViewController.swift */; };
+		93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		93353C8723CFBCD800BE57DE /* ArtGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93353C8B23CFBCD800BE57DE /* ArtGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITests.swift; sourceTree = "<group>"; };
 		93353C8D23CFBCD800BE57DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BED92A23CFDE1300DF6CA9 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
+		93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				93353C6923CFBCD600BE57DE /* AppDelegate.swift */,
 				93353C6B23CFBCD600BE57DE /* SceneDelegate.swift */,
 				93353C6D23CFBCD600BE57DE /* ViewController.swift */,
-				93BED92A23CFDE1300DF6CA9 /* ImageGalleryViewController.swift */,
+				93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */,
 				93353C6F23CFBCD600BE57DE /* Main.storyboard */,
 				93353C7223CFBCD800BE57DE /* Assets.xcassets */,
 				93353C7423CFBCD800BE57DE /* LaunchScreen.storyboard */,
@@ -264,7 +264,7 @@
 			files = (
 				93353C6E23CFBCD600BE57DE /* ViewController.swift in Sources */,
 				93353C6A23CFBCD600BE57DE /* AppDelegate.swift in Sources */,
-				93BED92B23CFDE1300DF6CA9 /* ImageGalleryViewController.swift in Sources */,
+				93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */,
 				93353C6C23CFBCD600BE57DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

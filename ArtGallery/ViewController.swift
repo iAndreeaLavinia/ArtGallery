@@ -21,9 +21,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
         customizeClearNavigation()
         titleLabel.text = "ART Gallery"
-        backgroundImageView.image = UIImage(named: "introImage")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +54,7 @@ class ViewController: UIViewController {
             self.titleLabel.isHidden = true
             self.setTheNavigationTitle()
             self.addALabelProgramatically()
+            self.goToLogin()
         }
     }
     
@@ -87,14 +88,18 @@ class ViewController: UIViewController {
         
         label.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        label.widthAnchor.constraint(equalToConstant: 150.0).isActive = true
-//        label.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
 
     }
     
-    func detailsAction() {
-        let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "ImageGalleryViewController") as! ImageGalleryViewController
-        navigationController?.pushViewController(detailsViewController, animated: true)
+    func goToLogin() {
+        let controller = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true) {
+        }
+    }
+
+    func goToLoginViaSegue() {
+        performSegue(withIdentifier: "ShowLoginViewController", sender: self)
     }
 
 

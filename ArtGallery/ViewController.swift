@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var exploreButton: UIButton!
+    
     @IBOutlet weak var introView: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
         
         customizeClearNavigation()
         titleLabel.text = "ART Gallery"
+        backgroundImageView.image = UIImage(named: "IntroImage")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,8 +51,8 @@ class ViewController: UIViewController {
 
         UIView.animate(withDuration: 3.0,
                        animations: {
+                        self.exploreButton.isHidden = false
                         self.introView.layoutSubviews()
-
         }) { (_) in
             self.titleLabel.isHidden = true
             self.setTheNavigationTitle()
@@ -101,7 +104,6 @@ class ViewController: UIViewController {
     func goToLoginViaSegue() {
         performSegue(withIdentifier: "ShowLoginViewController", sender: self)
     }
-
 
 }
 

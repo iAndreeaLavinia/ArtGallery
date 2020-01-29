@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryiesTableViewController: UITableViewController {
+class GalleriesTableViewController: UITableViewController {
 
     var viewModel: GalleryViewModel = GalleryViewModel()
     

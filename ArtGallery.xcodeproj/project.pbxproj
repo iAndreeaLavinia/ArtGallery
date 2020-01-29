@@ -19,7 +19,7 @@
 		936D747523E2201C0063D493 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747423E2201C0063D493 /* GalleryTableViewCell.swift */; };
 		936D747823E223AD0063D493 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747723E223AD0063D493 /* GalleryViewModel.swift */; };
 		936D747A23E223DE0063D493 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747923E223DE0063D493 /* GalleryModel.swift */; };
-		936D747C23E227520063D493 /* GalleryiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747B23E227520063D493 /* GalleryiesTableViewController.swift */; };
+		936D747C23E227520063D493 /* GalleriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747B23E227520063D493 /* GalleriesTableViewController.swift */; };
 		93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 		936D747423E2201C0063D493 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		936D747723E223AD0063D493 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		936D747923E223DE0063D493 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
-		936D747B23E227520063D493 /* GalleryiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryiesTableViewController.swift; sourceTree = "<group>"; };
+		936D747B23E227520063D493 /* GalleriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesTableViewController.swift; sourceTree = "<group>"; };
 		93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				936D747723E223AD0063D493 /* GalleryViewModel.swift */,
-				936D747B23E227520063D493 /* GalleryiesTableViewController.swift */,
+				936D747B23E227520063D493 /* GalleriesTableViewController.swift */,
 				936D747423E2201C0063D493 /* GalleryTableViewCell.swift */,
 			);
 			path = "Galeries list";
@@ -296,7 +296,7 @@
 				93353C6E23CFBCD600BE57DE /* ViewController.swift in Sources */,
 				936D747823E223AD0063D493 /* GalleryViewModel.swift in Sources */,
 				936D747323E21E760063D493 /* GalleriesViewController.swift in Sources */,
-				936D747C23E227520063D493 /* GalleryiesTableViewController.swift in Sources */,
+				936D747C23E227520063D493 /* GalleriesTableViewController.swift in Sources */,
 				936D747523E2201C0063D493 /* GalleryTableViewCell.swift in Sources */,
 				93353C6A23CFBCD600BE57DE /* AppDelegate.swift in Sources */,
 				93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */,

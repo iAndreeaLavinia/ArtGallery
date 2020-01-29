@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZE-NC-qf5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kAv-QM-ipy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -146,7 +146,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICN-LL-h44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2518.840579710145" y="-247.09821428571428"/>
+            <point key="canvasLocation" x="2351" y="-787"/>
+        </scene>
+        <!--Galleries View Controller-->
+        <scene sceneID="Hs0-hM-Knl">
+            <objects>
+                <viewController storyboardIdentifier="GalleriesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kAv-QM-ipy" customClass="GalleriesViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybl-w6-S5M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OIe-IV-6oM">
+                                <rect key="frame" x="20" y="44" width="374" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ART Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-G5-YSR" userLabel="ART Gallery Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XJi-GC-dH9">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="41"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Org-gl-3o0"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="List"/>
+                                            <segment title="Grid"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="screenTypeChanged:" destination="kAv-QM-ipy" eventType="valueChanged" id="0rl-z9-OxD"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-y1-Cap">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                                <connections>
+                                    <segue destination="kB1-a2-2Oz" kind="embed" identifier="ShowGalleryiesTableViewController" id="AV1-DD-x1X"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Ms-y1-Cap" firstAttribute="top" secondItem="OIe-IV-6oM" secondAttribute="bottom" constant="10" id="110-bj-t6n"/>
+                            <constraint firstItem="7Ms-y1-Cap" firstAttribute="trailing" secondItem="7Bs-4J-fQj" secondAttribute="trailing" id="8tg-hw-lYx"/>
+                            <constraint firstItem="7Bs-4J-fQj" firstAttribute="bottom" secondItem="7Ms-y1-Cap" secondAttribute="bottom" id="BJq-Xf-BJ7"/>
+                            <constraint firstAttribute="trailing" secondItem="OIe-IV-6oM" secondAttribute="trailing" constant="20" id="X8k-sC-aDG"/>
+                            <constraint firstItem="7Ms-y1-Cap" firstAttribute="leading" secondItem="ybl-w6-S5M" secondAttribute="leading" id="ZNc-rS-1G3"/>
+                            <constraint firstItem="OIe-IV-6oM" firstAttribute="top" secondItem="7Bs-4J-fQj" secondAttribute="top" id="aFB-8e-FW1"/>
+                            <constraint firstItem="OIe-IV-6oM" firstAttribute="leading" secondItem="ybl-w6-S5M" secondAttribute="leading" constant="20" id="the-Xp-7XB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Bs-4J-fQj"/>
+                    </view>
+                    <connections>
+                        <outlet property="screenContainerView" destination="7Ms-y1-Cap" id="ef3-Mh-umq"/>
+                        <outlet property="screenTypeSegmentedControl" destination="XJi-GC-dH9" id="7ym-yU-2ug"/>
+                        <outlet property="titleLabel" destination="JrV-G5-YSR" id="dcB-hp-gii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9b-Gg-X7x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3179.7101449275365" y="57.589285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3lu-5Y-QyM">
@@ -166,6 +229,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FH-Oj-NR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="655.07246376811599" y="57.589285714285708"/>
+        </scene>
+        <!--Galleryies Table View Controller-->
+        <scene sceneID="wHg-HG-IDC">
+            <objects>
+                <tableViewController storyboardIdentifier="GalleryiesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kB1-a2-2Oz" customClass="GalleryiesTableViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AKI-dK-69V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GalleryTableViewCell" rowHeight="200" id="OSj-LW-arC" customClass="GalleryTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OSj-LW-arC" id="1c9-sG-xuy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6B-G7-kpz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80450021404109584" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P1k-uO-pjQ">
+                                            <rect key="frame" x="20" y="10" width="374" height="180"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1 - Gallery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kj-ub-9Tg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="70G-3u-WvD">
+                                                    <rect key="frame" x="0.0" y="46" width="374" height="134"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Kj-ub-9Tg" firstAttribute="leading" secondItem="P1k-uO-pjQ" secondAttribute="leading" id="RKA-B7-FDp"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Kj-ub-9Tg" secondAttribute="trailing" id="oh4-Wu-egs"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="P1k-uO-pjQ" firstAttribute="leading" secondItem="1c9-sG-xuy" secondAttribute="leading" constant="20" id="Fel-sE-qOG"/>
+                                        <constraint firstItem="F6B-G7-kpz" firstAttribute="leading" secondItem="1c9-sG-xuy" secondAttribute="leading" id="NQb-S3-jlu"/>
+                                        <constraint firstAttribute="bottom" secondItem="P1k-uO-pjQ" secondAttribute="bottom" constant="10" id="OG4-cl-QlI"/>
+                                        <constraint firstAttribute="trailing" secondItem="P1k-uO-pjQ" secondAttribute="trailing" constant="20" id="YcT-Jv-JZ9"/>
+                                        <constraint firstItem="F6B-G7-kpz" firstAttribute="top" secondItem="1c9-sG-xuy" secondAttribute="top" id="YoS-4w-fUX"/>
+                                        <constraint firstAttribute="bottom" secondItem="F6B-G7-kpz" secondAttribute="bottom" id="naa-6M-l2T"/>
+                                        <constraint firstAttribute="trailing" secondItem="F6B-G7-kpz" secondAttribute="trailing" id="o70-FG-GNv"/>
+                                        <constraint firstItem="P1k-uO-pjQ" firstAttribute="top" secondItem="1c9-sG-xuy" secondAttribute="top" constant="10" id="pys-mx-XBN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="F6B-G7-kpz" id="rtS-FC-zNj"/>
+                                    <outlet property="descriptionTextView" destination="70G-3u-WvD" id="ccX-cg-lwQ"/>
+                                    <outlet property="titleLabel" destination="8Kj-ub-9Tg" id="pa7-PC-Kfg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kB1-a2-2Oz" id="H0y-zE-sMR"/>
+                            <outlet property="delegate" destination="kB1-a2-2Oz" id="NU8-AF-2gb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLO-zt-qv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3962" y="58"/>
         </scene>
     </scenes>
     <resources>

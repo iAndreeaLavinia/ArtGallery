@@ -56,5 +56,9 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    // TODO: - Validate and dismiss
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
 }

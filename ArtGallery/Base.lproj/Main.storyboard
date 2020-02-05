@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -185,7 +186,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-y1-Cap">
                                 <rect key="frame" x="0.0" y="164" width="414" height="698"/>
                                 <connections>
-                                    <segue destination="kB1-a2-2Oz" kind="embed" identifier="ShowGalleriesTableViewController" id="AV1-DD-x1X"/>
+                                    <segue destination="uqm-hY-4Pz" kind="embed" id="B3V-OW-XUO"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -235,7 +236,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="GalleriesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kB1-a2-2Oz" customClass="GalleriesTableViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AKI-dK-69V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -246,7 +247,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6B-G7-kpz">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintings" translatesAutoresizingMaskIntoConstraints="NO" id="F6B-G7-kpz">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80450021404109584" colorSpace="custom" customColorSpace="displayP3"/>
                                         </imageView>
@@ -262,7 +263,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="70G-3u-WvD">
                                                     <rect key="frame" x="0.0" y="46" width="374" height="134"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -307,9 +308,69 @@
             </objects>
             <point key="canvasLocation" x="3962" y="58"/>
         </scene>
+        <!--Galleries Collection View Controller-->
+        <scene sceneID="Fin-Dn-TOt">
+            <objects>
+                <collectionViewController storyboardIdentifier="GalleriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uqm-hY-4Pz" customClass="GalleriesCollectionViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xKe-UB-sRd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wcd-0v-Rae">
+                            <size key="itemSize" width="276" height="274"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionViewCell" id="N95-Ya-wLB" customClass="GalleryCollectionViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                <rect key="frame" x="69" y="0.0" width="276" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dX4-Jq-cxI">
+                                    <rect key="frame" x="0.0" y="0.0" width="276" height="274"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintings" translatesAutoresizingMaskIntoConstraints="NO" id="cD9-kT-Yyk">
+                                            <rect key="frame" x="0.0" y="0.0" width="276" height="274"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1 Gallery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85B-Zv-D29">
+                                            <rect key="frame" x="20" y="107" width="236" height="60"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cD9-kT-Yyk" firstAttribute="leading" secondItem="dX4-Jq-cxI" secondAttribute="leading" id="RrM-Lc-Heh"/>
+                                        <constraint firstAttribute="bottom" secondItem="cD9-kT-Yyk" secondAttribute="bottom" id="YDT-bo-sX9"/>
+                                        <constraint firstAttribute="trailing" secondItem="cD9-kT-Yyk" secondAttribute="trailing" id="ZfX-ci-237"/>
+                                        <constraint firstItem="cD9-kT-Yyk" firstAttribute="top" secondItem="dX4-Jq-cxI" secondAttribute="top" id="iuN-6M-Aih"/>
+                                        <constraint firstItem="85B-Zv-D29" firstAttribute="centerY" secondItem="dX4-Jq-cxI" secondAttribute="centerY" id="m5A-Rf-J19"/>
+                                        <constraint firstItem="85B-Zv-D29" firstAttribute="leading" secondItem="dX4-Jq-cxI" secondAttribute="leading" constant="20" id="sDr-gC-L5V"/>
+                                        <constraint firstAttribute="trailing" secondItem="85B-Zv-D29" secondAttribute="trailing" constant="20" id="zFt-n2-wPs"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="276" height="274"/>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="cD9-kT-Yyk" id="65d-lo-HLf"/>
+                                    <outlet property="titleLabel" destination="85B-Zv-D29" id="RUq-sc-pwD"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="uqm-hY-4Pz" id="Wie-uC-JKL"/>
+                            <outlet property="delegate" destination="uqm-hY-4Pz" id="YdW-Rm-ogN"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgM-EG-bcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3960.8695652173915" y="699.77678571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="IntroImage" width="564" height="846"/>
         <image name="detailsImage" width="500" height="750"/>
+        <image name="paintings" width="608" height="313"/>
     </resources>
 </document>

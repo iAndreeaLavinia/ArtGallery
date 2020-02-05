@@ -185,7 +185,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-y1-Cap">
                                 <rect key="frame" x="0.0" y="164" width="414" height="698"/>
                                 <connections>
-                                    <segue destination="kB1-a2-2Oz" kind="embed" identifier="ShowGalleryiesTableViewController" id="AV1-DD-x1X"/>
+                                    <segue destination="kB1-a2-2Oz" kind="embed" identifier="ShowGalleriesTableViewController" id="AV1-DD-x1X"/>
                                 </connections>
                             </containerView>
                         </subviews>

@@ -1,5 +1,5 @@
 //
-//  GalleryiesTableViewController.swift
+//  GalleriesTableViewController.swift
 //  ArtGallery
 //
 //  Created by Andreea Lavinia Ionescu on 29/01/2020.
@@ -29,7 +29,6 @@ class GalleriesTableViewController: UITableViewController {
         return viewModel.levelsList.count
     }
 
-   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GalleryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "GalleryTableViewCell", for: indexPath) as! GalleryTableViewCell
 
@@ -47,5 +46,4 @@ class GalleriesTableViewController: UITableViewController {
         return 300.0
     }
     
-
 }

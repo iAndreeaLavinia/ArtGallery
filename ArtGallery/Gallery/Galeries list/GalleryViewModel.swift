@@ -11,10 +11,7 @@ import UIKit
 class GalleryViewModel {
     
     var levelsList: [GalleryModel] = [GalleryModel]()
-    
-    /*
-     Creates an array of GalleryModels
-     */
+
     func createMockData() {
         let firstGallery = GalleryModel(name: "Paintings",
                                         level: 1,

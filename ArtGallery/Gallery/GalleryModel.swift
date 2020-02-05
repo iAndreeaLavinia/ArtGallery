@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryModel: NSObject {
+class GalleryModel {
 
     var name: String
     var level: Int

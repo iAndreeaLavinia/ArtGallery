@@ -41,6 +41,9 @@ class GalleriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        screenTypeSegmentedControl.selectedSegmentIndex = 0
+        add(asChildViewController: galleriesTableViewController)
     }
 
     @IBAction func screenTypeChanged(_ sender: UISegmentedControl) {

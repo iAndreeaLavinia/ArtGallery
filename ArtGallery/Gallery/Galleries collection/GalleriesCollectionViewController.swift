@@ -17,6 +17,7 @@ class GalleriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.createMockData()
+        viewModel.cellType = .Half
         collectionView.reloadData()
     }
 }
@@ -57,7 +58,11 @@ extension GalleriesCollectionViewController {
 // MARK: UICollectionViewDelegateFlowLayout
 extension GalleriesCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let side = (UIScreen.main.bounds.width - 10.0) / 2
-        return CGSize(width: side, height: side)
+        var size = UIScreen.main.bounds.width
+        if viewModel.cellType == .Half {
+            size = (size - 10) / 2
+        }
+        
+        return CGSize(width: size, height: size)
     }
 }

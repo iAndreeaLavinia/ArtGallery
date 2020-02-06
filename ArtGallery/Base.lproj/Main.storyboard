@@ -183,17 +183,14 @@
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-y1-Cap">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-y1-Cap">
                                 <rect key="frame" x="0.0" y="164" width="414" height="698"/>
-                                <connections>
-                                    <segue destination="uqm-hY-4Pz" kind="embed" id="B3V-OW-XUO"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Ms-y1-Cap" firstAttribute="top" secondItem="OIe-IV-6oM" secondAttribute="bottom" constant="10" id="110-bj-t6n"/>
-                            <constraint firstItem="7Ms-y1-Cap" firstAttribute="trailing" secondItem="7Bs-4J-fQj" secondAttribute="trailing" id="8tg-hw-lYx"/>
+                            <constraint firstItem="7Ms-y1-Cap" firstAttribute="trailing" secondItem="ybl-w6-S5M" secondAttribute="trailing" id="8tg-hw-lYx"/>
                             <constraint firstItem="7Bs-4J-fQj" firstAttribute="bottom" secondItem="7Ms-y1-Cap" secondAttribute="bottom" id="BJq-Xf-BJ7"/>
                             <constraint firstAttribute="trailing" secondItem="OIe-IV-6oM" secondAttribute="trailing" constant="20" id="X8k-sC-aDG"/>
                             <constraint firstItem="7Ms-y1-Cap" firstAttribute="leading" secondItem="ybl-w6-S5M" secondAttribute="leading" id="ZNc-rS-1G3"/>
@@ -238,7 +235,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AKI-dK-69V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GalleryTableViewCell" rowHeight="200" id="OSj-LW-arC" customClass="GalleryTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="200"/>
@@ -313,9 +310,9 @@
             <objects>
                 <collectionViewController storyboardIdentifier="GalleriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uqm-hY-4Pz" customClass="GalleriesCollectionViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" id="xKe-UB-sRd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X9p-eA-bzB">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

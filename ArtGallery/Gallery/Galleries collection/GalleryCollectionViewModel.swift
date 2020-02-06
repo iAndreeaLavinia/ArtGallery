@@ -8,6 +8,13 @@
 
 import UIKit
 
-class GalleryCollectionViewModel {
+enum GalleryCollectionType {
+    case Full
+    case Half
+}
+
+class GalleryCollectionViewModel: GalleryViewModel {
+    
+    var cellType: GalleryCollectionType = .Full
 
 }

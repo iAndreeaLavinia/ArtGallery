@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9b-Gg-X7x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3179.7101449275365" y="57.589285714285708"/>
+            <point key="canvasLocation" x="3038" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3lu-5Y-QyM">
@@ -316,25 +316,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wcd-0v-Rae">
-                            <size key="itemSize" width="276" height="274"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wcd-0v-Rae">
+                            <size key="itemSize" width="253" height="192"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionViewCell" id="N95-Ya-wLB" customClass="GalleryCollectionViewCell" customModule="ArtGallery" customModuleProvider="target">
-                                <rect key="frame" x="69" y="0.0" width="276" height="274"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dX4-Jq-cxI">
-                                    <rect key="frame" x="0.0" y="0.0" width="276" height="274"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintings" translatesAutoresizingMaskIntoConstraints="NO" id="cD9-kT-Yyk">
-                                            <rect key="frame" x="0.0" y="0.0" width="276" height="274"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1 Gallery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85B-Zv-D29">
-                                            <rect key="frame" x="20" y="107" width="236" height="60"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1 Gallery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85B-Zv-D29" userLabel="Level 1 Gallery">
+                                            <rect key="frame" x="20" y="70" width="160" height="60"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -350,10 +350,10 @@
                                         <constraint firstAttribute="trailing" secondItem="85B-Zv-D29" secondAttribute="trailing" constant="20" id="zFt-n2-wPs"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="276" height="274"/>
+                                <size key="customSize" width="200" height="200"/>
                                 <connections>
-                                    <outlet property="backgroundImageView" destination="cD9-kT-Yyk" id="65d-lo-HLf"/>
-                                    <outlet property="titleLabel" destination="85B-Zv-D29" id="RUq-sc-pwD"/>
+                                    <outlet property="backgroundImageView" destination="cD9-kT-Yyk" id="Kvx-fd-w6v"/>
+                                    <outlet property="titleLabel" destination="85B-Zv-D29" id="xUj-gy-zib"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -365,7 +365,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgM-EG-bcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3960.8695652173915" y="699.77678571428567"/>
+            <point key="canvasLocation" x="3959" y="709"/>
         </scene>
     </scenes>
     <resources>

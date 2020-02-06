@@ -14,4 +14,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    func configureCollectionCell(for galleryModel: GalleryModel) {
+        titleLabel.text = galleryModel.name
+        backgroundImageView.image = UIImage(named: galleryModel.imageName)
+    }
+    
 }

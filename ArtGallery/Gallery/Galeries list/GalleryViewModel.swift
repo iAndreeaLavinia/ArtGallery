@@ -22,12 +22,18 @@ class GalleryViewModel {
                                          level: 2,
                                          information: "Sculpture is three-dimensional artwork created by shaping or combining hard or plastic material, sound, or text and or light, commonly stone (either rock or marble), clay, metal, glass, or wood. Some sculptures are created directly by finding or carving; others are assembled, built together and fired, welded, molded, or cast. Sculptures are often painted.[20] A person who creates sculptures is called a sculptor.",
                                          imageName: "sculptures")
+        
+        let thirdGallery = GalleryModel(name: "Modern Art",
+                                        level: 3,
+                                        information: "Modern art includes artistic work produced during the period extending roughly from the 1860s to the 1970s, and denotes the styles and philosophy of the art produced during that era.[1] The term is usually associated with art in which the traditions of the past have been thrown aside in a spirit of experimentation.[2] Modern artists experimented with new ways of seeing and with fresh ideas about the nature of materials and functions of art.",
+                                        imageName: "modernArt")
+        
 
         /*
          Add a single element in the array. Attention! Be sure that your array is first initialized "[GalleryModel]()"
         levelsList.append(firstGallery)
          */
-        levelsList = [firstGallery, secondGallery]
+        levelsList = [firstGallery, secondGallery, thirdGallery, firstGallery, secondGallery, thirdGallery, firstGallery, secondGallery, thirdGallery]
     }
 
 }

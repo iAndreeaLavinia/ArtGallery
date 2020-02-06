@@ -16,13 +16,9 @@ class GalleriesCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register cell classes
         viewModel.createMockData()
-        self.collectionView!.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.reloadData()
     }
-
 }
 
 // MARK: UICollectionViewDataSource
@@ -52,7 +48,16 @@ extension GalleriesCollectionViewController {
 
 // MARK: UICollectionViewDelegate
 extension GalleriesCollectionViewController {
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-        print("Selected IndexPath: " + String(indexPath.row))
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         let galleryInfo: GalleryModel = viewModel.levelsList[indexPath.row]
+        print("Selected Gallery: \(galleryInfo.name)")
+    }
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension GalleriesCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let side = (UIScreen.main.bounds.width - 10.0) / 2
+        return CGSize(width: side, height: side)
     }
 }

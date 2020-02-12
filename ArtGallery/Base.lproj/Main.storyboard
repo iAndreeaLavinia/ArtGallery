@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kAv-QM-ipy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kAv-QM-ipy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -175,6 +175,7 @@
                                         <segments>
                                             <segment title="List"/>
                                             <segment title="Grid"/>
+                                            <segment title="Map"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -363,6 +364,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgM-EG-bcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3959" y="709"/>
+        </scene>
+        <!--Galleries Map View Controller-->
+        <scene sceneID="iId-Ay-7I8">
+            <objects>
+                <viewController storyboardIdentifier="GalleriesMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MSJ-M3-ieX" customClass="GalleriesMapViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GXO-5g-Kp7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-bK-IbH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ebc-bK-IbH" firstAttribute="leading" secondItem="GXO-5g-Kp7" secondAttribute="leading" id="JVF-cb-rQ2"/>
+                            <constraint firstAttribute="trailing" secondItem="Ebc-bK-IbH" secondAttribute="trailing" id="hNG-ps-5XG"/>
+                            <constraint firstItem="Ebc-bK-IbH" firstAttribute="top" secondItem="GXO-5g-Kp7" secondAttribute="top" id="msM-qn-pPR"/>
+                            <constraint firstAttribute="bottom" secondItem="Ebc-bK-IbH" secondAttribute="bottom" id="w9I-xO-Dbq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uul-rg-4ay"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Ebc-bK-IbH" id="66h-oW-der"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnc-NE-d7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3964" y="1380"/>
         </scene>
     </scenes>
     <resources>

@@ -39,6 +39,19 @@ class GalleriesViewController: UIViewController {
         return viewController
     }()
     
+    private lazy var galleriesMapViewController: GalleriesMapViewController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewController(withIdentifier: "GalleriesMapViewController") as! GalleriesMapViewController
+
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+
+        return viewController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,11 +60,15 @@ class GalleriesViewController: UIViewController {
     }
 
     @IBAction func screenTypeChanged(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 1 {
-            add(asChildViewController: galleriesCollectionViewController)
-        } else {
+        switch sender.selectedSegmentIndex {
+        case 0:
             add(asChildViewController: galleriesTableViewController)
+        case 1:
+            add(asChildViewController: galleriesCollectionViewController)
+        default:
+            add(asChildViewController: galleriesMapViewController)
         }
+        
     }
     
     private func add(asChildViewController viewController: UIViewController) {

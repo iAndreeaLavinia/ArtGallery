@@ -16,6 +16,9 @@
 		93353C8123CFBCD800BE57DE /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93353C8023CFBCD800BE57DE /* ArtGalleryTests.swift */; };
 		93353C8C23CFBCD800BE57DE /* ArtGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93353C8B23CFBCD800BE57DE /* ArtGalleryUITests.swift */; };
 		935B716323F4B64F004250D4 /* GalleriesMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935B716223F4B64F004250D4 /* GalleriesMapViewController.swift */; };
+		935B716523F4BCD9004250D4 /* GalleriesMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935B716423F4BCD9004250D4 /* GalleriesMapViewModel.swift */; };
+		935B716723F4C00B004250D4 /* GalleryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935B716623F4C00B004250D4 /* GalleryAnnotation.swift */; };
+		935B716923F4C8DA004250D4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935B716823F4C8DA004250D4 /* LocationManager.swift */; };
 		936D747323E21E760063D493 /* GalleriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747223E21E760063D493 /* GalleriesViewController.swift */; };
 		936D747523E2201C0063D493 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747423E2201C0063D493 /* GalleryTableViewCell.swift */; };
 		936D747823E223AD0063D493 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747723E223AD0063D493 /* GalleryViewModel.swift */; };
@@ -60,6 +63,9 @@
 		93353C8B23CFBCD800BE57DE /* ArtGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITests.swift; sourceTree = "<group>"; };
 		93353C8D23CFBCD800BE57DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935B716223F4B64F004250D4 /* GalleriesMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesMapViewController.swift; sourceTree = "<group>"; };
+		935B716423F4BCD9004250D4 /* GalleriesMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesMapViewModel.swift; sourceTree = "<group>"; };
+		935B716623F4C00B004250D4 /* GalleryAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAnnotation.swift; sourceTree = "<group>"; };
+		935B716823F4C8DA004250D4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		936D747223E21E760063D493 /* GalleriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesViewController.swift; sourceTree = "<group>"; };
 		936D747423E2201C0063D493 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		936D747723E223AD0063D493 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 		935B716123F4B601004250D4 /* Gallery Map */ = {
 			isa = PBXGroup;
 			children = (
+				935B716823F4C8DA004250D4 /* LocationManager.swift */,
+				935B716623F4C00B004250D4 /* GalleryAnnotation.swift */,
+				935B716423F4BCD9004250D4 /* GalleriesMapViewModel.swift */,
 				935B716223F4B64F004250D4 /* GalleriesMapViewController.swift */,
 			);
 			path = "Gallery Map";
@@ -325,6 +334,7 @@
 				93D9B85F23EB8B25000821C8 /* GalleriesCollectionViewController.swift in Sources */,
 				93D9B86123EB8B55000821C8 /* GalleryCollectionViewCell.swift in Sources */,
 				93353C6E23CFBCD600BE57DE /* ViewController.swift in Sources */,
+				935B716923F4C8DA004250D4 /* LocationManager.swift in Sources */,
 				936D747823E223AD0063D493 /* GalleryViewModel.swift in Sources */,
 				93D9B85D23EB8AF6000821C8 /* GalleryCollectionViewModel.swift in Sources */,
 				936D747323E21E760063D493 /* GalleriesViewController.swift in Sources */,
@@ -333,7 +343,9 @@
 				93353C6A23CFBCD600BE57DE /* AppDelegate.swift in Sources */,
 				93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */,
 				936D747A23E223DE0063D493 /* GalleryModel.swift in Sources */,
+				935B716523F4BCD9004250D4 /* GalleriesMapViewModel.swift in Sources */,
 				93353C6C23CFBCD600BE57DE /* SceneDelegate.swift in Sources */,
+				935B716723F4C00B004250D4 /* GalleryAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,13 @@
 
 import UIKit
 
-class GalleryModel {
+struct GalleryModel {
 
     var name: String
     var level: Int
     var information: String
     var imageName: String
-    
-    init(name: String, level: Int, information: String, imageName: String) {
-        self.name = name
-        self.level = level
-        self.information = information
-        self.imageName = imageName
-    }
+    var latitude: Double
+    var longitude: Double
+
 }

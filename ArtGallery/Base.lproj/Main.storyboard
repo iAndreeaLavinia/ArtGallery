@@ -375,6 +375,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-bK-IbH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MSJ-M3-ieX" id="DCU-oa-yV3"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

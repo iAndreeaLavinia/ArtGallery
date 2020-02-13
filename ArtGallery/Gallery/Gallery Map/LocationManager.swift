@@ -25,11 +25,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func currentLocation() {
        locationManager.delegate = self
        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-       if #available(iOS 11.0, *) {
-          locationManager.showsBackgroundLocationIndicator = true
-       } else {
-          // Fallback on earlier versions
-       }
+       locationManager.showsBackgroundLocationIndicator = true
        locationManager.startUpdatingLocation()
     }
     
@@ -40,8 +36,5 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
        delegate?.locationDidUpdate(region: coordinateRegion)
        locationManager.stopUpdatingLocation()
     }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-       print(error.localizedDescription)
-    }
+
 }

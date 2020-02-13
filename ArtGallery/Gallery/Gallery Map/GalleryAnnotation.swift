@@ -27,7 +27,5 @@ class GalleryAnnotation: NSObject, MKAnnotation {
     init(gallery: GalleryModel) {
         self.gallery = gallery
         super.init()
-    }
-  
-  
+    }  
 }

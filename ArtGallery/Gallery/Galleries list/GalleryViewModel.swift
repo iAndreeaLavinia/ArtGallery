@@ -13,6 +13,7 @@ class GalleryViewModel {
     var levelsList: [GalleryModel] = [GalleryModel]()
 
     func createMockData() {
+        /*
         let firstGallery = GalleryModel(name: "Paintings",
                                         level: 1,
                                         information: "Painting taken literally is the practice of applying pigment suspended in a carrier (or medium) and a binding agent (a glue) to a surface (support) such as paper, canvas or a wall. However, when used in an artistic sense it means the use of this activity in combination with drawing, composition, or other aesthetic considerations in order to manifest the expressive and conceptual intention of the practitioner. Painting is also used to express spiritual motifs and ideas; sites of this kind of painting range from artwork depicting mythological figures on pottery to The Sistine Chapel to the human body itself.",
@@ -35,6 +36,22 @@ class GalleryViewModel {
                                         longitude: 26.0959075)
         
         levelsList = [firstGallery, secondGallery, thirdGallery, firstGallery, secondGallery, thirdGallery, firstGallery, secondGallery, thirdGallery]
+     */
+    }
+    
+    func getDataFromAPI(result: @escaping (Bool) -> ()) {
+        let session: APIModel = APIModel()
+        session.getGalleries { galleriesList, succeeded  in
+            
+            guard succeeded == true, let galleriesList = galleriesList else {
+                result(false)
+                return
+            }
+            
+            self.levelsList = galleriesList
+            result(true)
+            
+        }
     }
 
 }

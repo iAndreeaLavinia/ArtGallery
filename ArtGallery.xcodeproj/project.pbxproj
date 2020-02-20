@@ -24,6 +24,8 @@
 		936D747823E223AD0063D493 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747723E223AD0063D493 /* GalleryViewModel.swift */; };
 		936D747A23E223DE0063D493 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747923E223DE0063D493 /* GalleryModel.swift */; };
 		936D747C23E227520063D493 /* GalleriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747B23E227520063D493 /* GalleriesTableViewController.swift */; };
+		93B56A5A23FEBD0500E1E660 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B56A5923FEBD0500E1E660 /* APIModel.swift */; };
+		93B56A5C23FEC47400E1E660 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B56A5B23FEC47400E1E660 /* Helpers.swift */; };
 		93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */; };
 		93D9B85D23EB8AF6000821C8 /* GalleryCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D9B85C23EB8AF6000821C8 /* GalleryCollectionViewModel.swift */; };
 		93D9B85F23EB8B25000821C8 /* GalleriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D9B85E23EB8B25000821C8 /* GalleriesCollectionViewController.swift */; };
@@ -71,6 +73,8 @@
 		936D747723E223AD0063D493 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		936D747923E223DE0063D493 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
 		936D747B23E227520063D493 /* GalleriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesTableViewController.swift; sourceTree = "<group>"; };
+		93B56A5923FEBD0500E1E660 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		93B56A5B23FEC47400E1E660 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		93D9B85C23EB8AF6000821C8 /* GalleryCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewModel.swift; sourceTree = "<group>"; };
 		93D9B85E23EB8B25000821C8 /* GalleriesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				93353C6B23CFBCD600BE57DE /* SceneDelegate.swift */,
 				93353C6D23CFBCD600BE57DE /* ViewController.swift */,
 				93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */,
+				93B56A5923FEBD0500E1E660 /* APIModel.swift */,
+				93B56A5B23FEC47400E1E660 /* Helpers.swift */,
 				936D747623E223320063D493 /* Gallery */,
 				93353C6F23CFBCD600BE57DE /* Main.storyboard */,
 				93353C7223CFBCD800BE57DE /* Assets.xcassets */,
@@ -339,9 +345,11 @@
 				93D9B85D23EB8AF6000821C8 /* GalleryCollectionViewModel.swift in Sources */,
 				936D747323E21E760063D493 /* GalleriesViewController.swift in Sources */,
 				936D747C23E227520063D493 /* GalleriesTableViewController.swift in Sources */,
+				93B56A5A23FEBD0500E1E660 /* APIModel.swift in Sources */,
 				936D747523E2201C0063D493 /* GalleryTableViewCell.swift in Sources */,
 				93353C6A23CFBCD600BE57DE /* AppDelegate.swift in Sources */,
 				93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */,
+				93B56A5C23FEC47400E1E660 /* Helpers.swift in Sources */,
 				936D747A23E223DE0063D493 /* GalleryModel.swift in Sources */,
 				935B716523F4BCD9004250D4 /* GalleriesMapViewModel.swift in Sources */,
 				93353C6C23CFBCD600BE57DE /* SceneDelegate.swift in Sources */,

@@ -20,14 +20,21 @@ class GalleriesMapViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        viewModel.galleries.createMockData()
-        
+        if viewModel.galleries.levelsList.count == 0 {
+            viewModel.galleries.getDataFromAPI { [weak self] (suceeded) in
+                self?.refreshDataOnMap()
+            }
+        } else {
+            refreshDataOnMap()
+        }
+    }
+    
+    func refreshDataOnMap() {
         // Bucharest Location
-        let region = viewModel.centerMapOnLocation(location: viewModel.initialLocation)
-        mapView.setRegion(region, animated: true)
-        
-        addAnnotationsOnTheMap()
-        setUpMapView()
+        let region = self.viewModel.centerMapOnLocation(location: self.viewModel.initialLocation)
+        self.mapView.setRegion(region, animated: true)
+        self.addAnnotationsOnTheMap()
+        self.setUpMapView()
     }
     
     func setUpMapView() {

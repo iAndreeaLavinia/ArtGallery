@@ -16,7 +16,14 @@ class GalleriesCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.createMockData()
+        
+        if viewModel.levelsList.count == 0 {
+            viewModel.getDataFromAPI { (suceeded) in
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
         viewModel.cellType = .Half
         collectionView.reloadData()
     }

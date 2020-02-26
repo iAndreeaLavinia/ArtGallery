@@ -15,8 +15,13 @@ class GalleriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.createMockData()
-        tableView.reloadData()
+        if viewModel.levelsList.count == 0 {
+            viewModel.getDataFromAPI { (suceeded) in
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source

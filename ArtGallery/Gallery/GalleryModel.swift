@@ -6,9 +6,9 @@
 //  Copyright © 2020 Orange Labs Romania. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class GalleryModel: Decodable {
+class GalleryModel: Codable {
 
     var name: String
     var level: Int
@@ -18,12 +18,12 @@ class GalleryModel: Decodable {
     var longitude: Double
 
     enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case level = "level"
-        case information = "information"
-        case imageName = "imageName"
-        case latitude = "latitude"
-        case longitude = "longitude"
+        case name = "gallery_name"
+        case level
+        case information
+        case imageName
+        case latitude
+        case longitude
     }
         
     required init(from decoder: Decoder) throws {

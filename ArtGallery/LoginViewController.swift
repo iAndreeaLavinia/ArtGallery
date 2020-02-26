@@ -11,15 +11,10 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
-
     @IBOutlet weak var mainStackView: UIStackView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-        
     @IBOutlet weak var usernameTextField: UITextField!
-   
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
 
     //MARK: - Life cycle
@@ -35,7 +30,6 @@ class LoginViewController: UIViewController {
         // FIXME: - Localize this string
         // Set a placeholder that dissapears while editing
         passwordTextField.placeholder = "Password"
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +44,6 @@ class LoginViewController: UIViewController {
         } else {
            self.dismiss(animated: true, completion: nil)
         }
-        
     }
     
 }

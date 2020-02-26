@@ -16,6 +16,7 @@ protocol LocationManagerDelegate: class {
 class LocationManager: NSObject, CLLocationManagerDelegate {
 
     weak var delegate: LocationManagerDelegate?
+    
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()

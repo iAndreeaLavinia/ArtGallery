@@ -24,6 +24,7 @@
 		936D747823E223AD0063D493 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747723E223AD0063D493 /* GalleryViewModel.swift */; };
 		936D747A23E223DE0063D493 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747923E223DE0063D493 /* GalleryModel.swift */; };
 		936D747C23E227520063D493 /* GalleriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D747B23E227520063D493 /* GalleriesTableViewController.swift */; };
+		938264D82411475D0026FB16 /* GlalleryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938264D72411475D0026FB16 /* GlalleryDetailsViewController.swift */; };
 		93B56A5A23FEBD0500E1E660 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B56A5923FEBD0500E1E660 /* APIModel.swift */; };
 		93B56A5C23FEC47400E1E660 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B56A5B23FEC47400E1E660 /* Helpers.swift */; };
 		93BED92B23CFDE1300DF6CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		932A37EB2423C22700325B3E /* ArtGallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArtGallery.entitlements; sourceTree = "<group>"; };
 		93353C6623CFBCD600BE57DE /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93353C6923CFBCD600BE57DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93353C6B23CFBCD600BE57DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		936D747723E223AD0063D493 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		936D747923E223DE0063D493 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
 		936D747B23E227520063D493 /* GalleriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesTableViewController.swift; sourceTree = "<group>"; };
+		938264D72411475D0026FB16 /* GlalleryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlalleryDetailsViewController.swift; sourceTree = "<group>"; };
 		93B56A5923FEBD0500E1E660 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		93B56A5B23FEC47400E1E660 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		93BED92A23CFDE1300DF6CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		93353C6823CFBCD600BE57DE /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
+				932A37EB2423C22700325B3E /* ArtGallery.entitlements */,
 				93353C6923CFBCD600BE57DE /* AppDelegate.swift */,
 				93353C6B23CFBCD600BE57DE /* SceneDelegate.swift */,
 				93353C6D23CFBCD600BE57DE /* ViewController.swift */,
@@ -181,6 +185,7 @@
 			children = (
 				936D747923E223DE0063D493 /* GalleryModel.swift */,
 				936D747223E21E760063D493 /* GalleriesViewController.swift */,
+				938264D6241147350026FB16 /* Gallery Details */,
 				935B716123F4B601004250D4 /* Gallery Map */,
 				93D9B85B23EB8AC4000821C8 /* Galleries collection */,
 				936D747D23E227660063D493 /* Galleries list */,
@@ -196,6 +201,14 @@
 				936D747423E2201C0063D493 /* GalleryTableViewCell.swift */,
 			);
 			path = "Galleries list";
+			sourceTree = "<group>";
+		};
+		938264D6241147350026FB16 /* Gallery Details */ = {
+			isa = PBXGroup;
+			children = (
+				938264D72411475D0026FB16 /* GlalleryDetailsViewController.swift */,
+			);
+			path = "Gallery Details";
 			sourceTree = "<group>";
 		};
 		93D9B85B23EB8AC4000821C8 /* Galleries collection */ = {
@@ -358,6 +371,7 @@
 				935B716523F4BCD9004250D4 /* GalleriesMapViewModel.swift in Sources */,
 				93353C6C23CFBCD600BE57DE /* SceneDelegate.swift in Sources */,
 				935B716723F4C00B004250D4 /* GalleryAnnotation.swift in Sources */,
+				938264D82411475D0026FB16 /* GlalleryDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,14 +544,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ArtGallery/ArtGallery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93X795ZP68;
+				DEVELOPMENT_TEAM = M568M8LNK5;
 				INFOPLIST_FILE = ArtGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orange.labs.ArtGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.andreealavinia.ArtGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -548,14 +563,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ArtGallery/ArtGallery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93X795ZP68;
+				DEVELOPMENT_TEAM = M568M8LNK5;
 				INFOPLIST_FILE = ArtGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orange.labs.ArtGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.andreealavinia.ArtGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

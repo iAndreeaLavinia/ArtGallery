@@ -55,6 +55,8 @@ class GalleriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        screenTypeSegmentedControl.accessibilityIdentifier = "viewTypeSegementedControlIdentifier"
+        
         screenTypeSegmentedControl.selectedSegmentIndex = 0
         add(asChildViewController: galleriesTableViewController)
     }

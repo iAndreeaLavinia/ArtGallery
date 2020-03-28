@@ -40,4 +40,19 @@ class ArtGalleryUITests: XCTestCase {
             }
         }
     }
+    
+    func testTableScreen() {
+        
+        let app = XCUIApplication()
+        let button = app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Paintings").element
+        button.twoFingerTap()
+        
+        let segmentedButtons = app.segmentedControls["viewTypeSegementedControlIdentifier"]
+        
+        let buttonLogin = app.buttons["loginBuuton"]
+        button.tap()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["List"]/*[[".segmentedControls[\"viewTypeSegementedControlIdentifier\"].buttons[\"List\"]",".buttons[\"List\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.twoFingerTap()
+        
+    }
 }

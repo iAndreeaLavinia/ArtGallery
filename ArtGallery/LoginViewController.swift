@@ -32,6 +32,12 @@ class LoginViewController: UIViewController {
         passwordTextField.placeholder = "Password"
     }
     
+    func access() {
+        backgroundImageView.accessibilityIdentifier = "backgroundImageViewIdentifier"
+        mainStackView.accessibilityIdentifier  = "myMainStackViewIdentifier"
+        loginButton.accessibilityIdentifier = "loginButtonIdentifier"
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)

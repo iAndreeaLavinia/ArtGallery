@@ -15,8 +15,10 @@ class GalleryViewModel {
     func getDataFromAPI(result: @escaping (Bool) -> ()) {
         let session: APIModel = APIModel()
         session.getGalleries{ galleriesList, succeeded  in
-            guard succeeded == true, let galleriesList = galleriesList else {
-                self.levelsList = [GalleryModel]()
+            guard succeeded == true,
+                let galleriesList = galleriesList else {
+                
+                    self.levelsList = [GalleryModel]()
                 result(false)
                 return
             }
